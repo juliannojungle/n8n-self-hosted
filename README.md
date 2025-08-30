@@ -6,8 +6,8 @@
 
   ```shell
   md ~/.n8n
-  openssl req -new -newkey rsa:4096 -nodes -keyout ~/.n8n/n8n.key -out ~/.n8n/n8n.csr
-  openssl x509 -req -sha256 -days 365 -in n8n.csr -signkey ~/.n8n/n8n.key -out ~/.n8n/n8n_certificate.pem
+  openssl req -new -newkey rsa:4096 -nodes -keyout ~/.n8n/n8n_private.key -out ~/.n8n/n8n.csr
+  openssl x509 -req -sha256 -days 365 -in n8n.csr -signkey ~/.n8n/n8n_private.key -out ~/.n8n/n8n_certificate.pem
   ```
 
 ## Host on Docker
@@ -30,5 +30,5 @@
   - `TZ`, `America/Sao_Paulo`
   - `N8N_PROTOCOL`, `https`
   - `N8N_SSL_CERT`, `/home/node/.n8n/n8n_certificate.pem`
-  - `N8N_SSL_KEY`, `/home/node/.n8n/n8n.key`
+  - `N8N_SSL_KEY`, `/home/node/.n8n/n8n_private.key`
   - `N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS`, `false`
