@@ -7,7 +7,7 @@
   ```shell
   md ~/.n8n
   openssl req -new -newkey rsa:4096 -nodes -keyout ~/.n8n/n8n_private.key -out ~/.n8n/n8n.csr
-  openssl x509 -req -sha256 -days 365 -in n8n.csr -signkey ~/.n8n/n8n_private.key -out ~/.n8n/n8n_certificate.pem
+  openssl x509 -req -sha256 -days 365 -in ~/.n8n/n8n.csr -signkey ~/.n8n/n8n_private.key -out ~/.n8n/n8n_certificate.pem
   ```
 
 ## Host on Docker
