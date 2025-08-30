@@ -1,5 +1,7 @@
 # n8n self-hosted
 
+Simple instructions to setup [n8n](https://github.com/n8n-io/n8n) on self-hosted docker using [Portainer](https://github.com/portainer/portainer).
+
 ## Local certificate
 
 - Run on terminal:
